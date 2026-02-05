@@ -11,6 +11,7 @@ const Navigation = () => {
     { path: '/context', label: 'Context API - Thème' },
     { path: '/redux', label: 'Redux - Panier' },
     { path: '/zustand', label: 'Zustand - Auth' },
+    { path: '/proxy', label: 'Proxy State - Trading' },
   ];
 
   return (

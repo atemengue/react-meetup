@@ -8,6 +8,7 @@ import { store } from './modules/redux-example/store';
 import UseReducerExample from './modules/useReducer-example/UseReducerExample';
 import UseStateExample from './modules/useState-example/UseStateExample';
 import ZustandExample from './modules/zustand-example/ZustandExample';
+import ProxyExample from './modules/proxy-example/ProxyExample';
 import Home from './pages/Home';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
               <Route path="context" element={<ContextExample />} />
               <Route path="redux" element={<ReduxExample />} />
               <Route path="zustand" element={<ZustandExample />} />
+              <Route path="proxy" element={<ProxyExample />} />
             </Route>
           </Routes>
         </BrowserRouter>

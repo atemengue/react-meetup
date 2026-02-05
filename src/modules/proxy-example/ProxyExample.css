@@ -1,0 +1,328 @@
+/* --- Trading Controls --- */
+
+.trading-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px 0;
+  padding: 20px;
+  background-color: #282c34;
+  border-radius: 8px;
+}
+
+.controls-left {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ctrl-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+.ctrl-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(97, 218, 251, 0.3);
+}
+
+.ctrl-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.ctrl-btn.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.ctrl-btn.stop {
+  background-color: #f44336;
+  color: white;
+}
+
+.ctrl-btn.reset {
+  background-color: #ff9800;
+  color: white;
+}
+
+.market-status {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.open {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-badge.closed {
+  background-color: #f44336;
+  color: white;
+}
+
+.status-badge.pre-market {
+  background-color: #ff9800;
+  color: white;
+}
+
+.stat {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+/* --- Stocks Grid --- */
+
+.stocks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.stock-card {
+  background: white;
+  padding: 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 4px solid #ccc;
+}
+
+.stock-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.stock-card.positive {
+  border-left-color: #4caf50;
+}
+
+.stock-card.negative {
+  border-left-color: #f44336;
+}
+
+.stock-card.selected {
+  border-left-color: #61dafb;
+  box-shadow: 0 4px 16px rgba(97, 218, 251, 0.35);
+  background: #f0faff;
+}
+
+.stock-symbol {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #282c34;
+  margin-bottom: 2px;
+}
+
+.stock-name {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.stock-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #282c34;
+  margin-bottom: 5px;
+}
+
+.stock-change {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.stock-change.positive {
+  color: #4caf50;
+}
+
+.stock-change.negative {
+  color: #f44336;
+}
+
+.stock-volume {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* --- Chart Section --- */
+
+.chart-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin: 25px 0;
+}
+
+.chart-section h3 {
+  margin: 0 0 20px 0;
+  color: #282c34;
+}
+
+.chart-points {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.volume-title {
+  margin: 20px 0 10px 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.chart-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #999;
+  font-style: italic;
+  border: 2px dashed #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* --- Analytics Section --- */
+
+.analytics-section {
+  margin: 25px 0;
+}
+
+.analytics-section h3 {
+  margin-bottom: 15px;
+  color: #282c34;
+}
+
+.mutations-table {
+  max-height: 350px;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.mutations-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.mutations-table th {
+  position: sticky;
+  top: 0;
+  background-color: #282c34;
+  color: white;
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.mutations-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.mutations-table tr:hover td {
+  background-color: #f8f9fa;
+}
+
+.mutations-table code {
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  color: #d63384;
+}
+
+.action-badge {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem !important;
+  color: #61dafb !important;
+}
+
+.empty-analytics {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 30px;
+}
+
+/* --- Architecture Info Grid --- */
+
+.proxy-info {
+  margin-top: 40px;
+}
+
+.proxy-info h3 {
+  color: #282c34;
+  margin-bottom: 5px;
+}
+
+.architecture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.arch-card {
+  background: white;
+  padding: 22px;
+  border-radius: 8px;
+  border-left: 4px solid #61dafb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.arch-card:hover {
+  transform: translateY(-3px);
+}
+
+.arch-card h4 {
+  margin: 0 0 10px 0;
+  color: #282c34;
+  font-size: 1.05rem;
+}
+
+.arch-card p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.arch-card code {
+  background-color: #282c34;
+  color: #61dafb;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}

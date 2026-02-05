@@ -36,6 +36,12 @@ const Home = () => {
           <p>State management simple et léger avec authentification</p>
           <div className="tag">Intermédiaire</div>
         </div>
+
+        <div className="module-card">
+          <h3>Proxy State (Valtio)</h3>
+          <p>Dashboard de trading avec état réactif via JavaScript Proxy, courbes temps réel et analytics</p>
+          <div className="tag">Avancé</div>
+        </div>
       </div>
 
       <div className="info-section">
