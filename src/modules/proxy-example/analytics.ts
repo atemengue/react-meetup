@@ -17,9 +17,7 @@ export class AnalyticsTracker {
       newValue,
       action,
     };
-
     this.mutations.push(record);
-
     if (this.mutations.length > this.maxRecords) {
       this.mutations = this.mutations.slice(-this.maxRecords);
     }

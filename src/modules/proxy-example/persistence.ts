@@ -14,11 +14,9 @@ export class PersistenceManager {
     if (this.debounceTimer) {
       clearTimeout(this.debounceTimer);
     }
-
     this.debounceTimer = setTimeout(() => {
       try {
-        const serialized = JSON.stringify(state);
-        localStorage.setItem(this.storageKey, serialized);
+        localStorage.setItem(this.storageKey, JSON.stringify(state));
       } catch (error) {
         console.error('Erreur de persistance:', error);
       }
